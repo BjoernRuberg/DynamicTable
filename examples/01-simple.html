@@ -2,6 +2,8 @@
   <head>
     <title>01 Simple example</title>
     <meta content="">
+
+	<!-- Requirements -->
 	<link href="../lib/jquery-ui-1.10.3.core.css" rel="stylesheet" type="text/css" />
 	<link href="../lib/jquery-ui-1.10.3.button.css" rel="stylesheet" type="text/css" />
 	<link href="../src/jquery.dynamictable.css" rel="stylesheet" type="text/css" />
@@ -13,6 +15,11 @@
 	<script>
 		$( document ).ready( function()
 		{
+			/*
+			* Dynamic table needs a source. The source must return an array of objects, preferably of the same structure
+			* Each object in the array is to represent one row in the table
+			*/
+			
 			$("#exampleTable").dynamicTable( {
 				source: function( success )
 				{
