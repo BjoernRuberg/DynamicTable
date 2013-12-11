@@ -73,4 +73,3 @@ This attributes can be used in a th tag to configure the column:
 - data-columnclass: CSS class to be added to each cell of this column
 - data-columnstyle: CSS style rules to be applied to each cell of this column
 - data-preprocess: Preprocessor to be used on all data in this column. It may be pre- or self-defined
-- 
