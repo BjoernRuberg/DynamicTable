@@ -21,3 +21,40 @@ DynamicTable provides generic features for displaying data in the browser. Just 
 - Filter rows by text input terms
 - Preprocess the raw data before displaying it in the output
 - Various hooks to enable interaction with the provided data. 
+
+## Usage
+
+DynamicTable uses the HTML-markup of a table element to display data. DynamicTable requires an array ob well-formed objects to work on. The data might look like this:
+
+### Example Data
+[
+		{ "id": 1, "name": "John Doe", "age": "30" },
+		{ "id": 2, "name": "John Does", "age": "35" },
+		{ "id": 3, "name": "John Depp", "age": "40" },
+		{ "id": 4, "name": "John Doep", "age": "20" }
+]
+
+### Example Markup
+<table id="exampleTable" width="90%">
+	<thead>
+		<tr>
+			<th data-index="id" data-type="int">Id</th>
+			<th data-index="name">Name</th>
+			<th data-index="age" data-preprocess="date">Age</th>
+		</tr>
+	</thead>
+</table>	
+
+### Example DynamicTable initialization
+
+$("#exampleTable").dynamicTable( {
+	source: function( success )
+	{
+		success( [
+			{ "id": 1, "name": "John Doe", "age": "30" },
+			{ "id": 2, "name": "John Does", "age": "35" },
+			{ "id": 3, "name": "John Depp", "age": "40" },
+			{ "id": 4, "name": "John Doep", "age": "20" }
+		] );
+	}
+} );
