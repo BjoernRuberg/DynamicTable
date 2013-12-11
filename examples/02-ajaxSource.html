@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>02 Ajax source example</title>
+    <meta content="">
+
+	<!-- Requirements -->
+	<link href="../lib/jquery-ui-1.10.3.core.css" rel="stylesheet" type="text/css" />
+	<link href="../lib/jquery-ui-1.10.3.button.css" rel="stylesheet" type="text/css" />
+	<link href="../src/jquery.dynamictable.css" rel="stylesheet" type="text/css" />
+	<script src="../lib/jquery-2.0.3.js"></script>
+	<script src="../lib/jquery-ui-1.10.3.core.js"></script>
+	<script src="../lib/jquery-ui-1.10.3.button.js"></script>
+	<script src="../src/jquery.dynamictable.js"></script>
+
+	<script>
+		$( document ).ready( function()
+		{
+			/*
+			* Dynamic table needs a source. The source must return an array of objects, preferably of the same structure
+			* Each object in the array is to represent one row in the table
+			*/
+			
+			$("#exampleTable").dynamicTable( {
+				source: function( success )
+				{
+					/* This time we use a an ajax source like this */
+					$.ajax(
+					{
+						type	: "POST",
+						url		: "datasource.json", // <- this obviously must be adapted to your datasource
+						dataType: "JSON",
+						success	: success
+					});
+				}
+			} );
+		} );
+	</script>
+  </head>
+	<body>
+		<table id="exampleTable" width="90%">
+			<thead>
+				<tr>
+					<th data-index="id" data-type="int">Id</th>
+					<th data-index="name">Name</th>
+					<th data-index="age" data-preprocess="date">Age</th>
+				</tr>
+			</thead>
+		</table>	
+	</body>
+</html>
