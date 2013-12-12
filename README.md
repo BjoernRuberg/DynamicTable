@@ -2,7 +2,9 @@ DynamicTable
 ============
 
 The JQuery DynamicTable is a Jquery UI widget which provides an interactive table for viewing data.
-It provides important functions for working with data like sorting, filtering and paging.
+It provides important functions for working with data like sorting, filtering and paging. 
+
+It is designed to make it easy for the developer to provide a tool for working with table data. It is really easy to load data into the DynamicTable. Moreover it's goal is to remain flexible. You as a developer should be able to easily add your own extension if simply displaying the data is not enough.
 
 ### Requirements
 
