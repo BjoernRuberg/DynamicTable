@@ -70,13 +70,6 @@ $("#exampleTable").dynamicTable( {
 
 ## Demo
 
-<link href="lib/jquery-ui-1.10.3.core.css" rel="stylesheet" type="text/css" />
-<link href="lib/jquery-ui-1.10.3.button.css" rel="stylesheet" type="text/css" />
-<link href="src/jquery.dynamictable.css" rel="stylesheet" type="text/css" />
-<script src="lib/jquery-2.0.3.js"></script>
-<script src="lib/jquery-ui-1.10.3.core.js"></script>
-<script src="lib/jquery-ui-1.10.3.button.js"></script>
-<script src="src/jquery.dynamictable.js"></script>
 
 ## Column configuration in markup
 
